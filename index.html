@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Holy Matrimony Invitation | 24th November 2026</title>
+    <meta name="description" content="You are cordially invited to celebrate the Holy Matrimony on 24th November 2026. Join us in worship and blessings.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✝️</text></svg>">
+</head>
+<body>
+
+    <!-- Soft Ambient Church Backdrop -->
+    <div class="site-backdrop" aria-hidden="true"></div>
+    <div class="site-overlay" aria-hidden="true"></div>
+
+    <!-- Falling Petals & Sparkles Canvas -->
+    <canvas id="particlesCanvas" aria-hidden="true"></canvas>
+
+    <!-- Interactive Envelope Gateway (Triggers Music & Opens Invitation) -->
+    <div id="envelopeGateway" class="envelope-gateway" role="dialog" aria-modal="true" aria-label="Wedding Invitation Envelope">
+        <div id="envelopeWrapper" class="envelope-wrapper">
+            <div class="envelope-box">
+                <div class="envelope-left-fold"></div>
+                <div class="envelope-right-fold"></div>
+                <div class="envelope-bottom-flap"></div>
+                <div class="envelope-flap"></div>
+                <button type="button" class="wax-seal" id="waxSealBtn" aria-label="Break seal and open invitation with wedding music">
+                    <span class="wax-cross">✝</span>
+                    <span class="wax-monogram">OPEN</span>
+                </button>
+            </div>
+            <div class="gateway-text">
+                <p class="gateway-subtitle">Holy Matrimony</p>
+                <p class="gateway-title">David &amp; Sarah</p>
+                <button type="button" id="openInvitationBtn" class="gateway-btn">
+                    <span>Open Invitation</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                    </svg>
+                </button>
+                <p class="gateway-note">🎵 Opens with sacred acoustic wedding music</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Ambient Audio Controller -->
+    <button type="button" id="musicController" class="music-controller" aria-label="Toggle wedding music">
+        <div class="music-equalizer" aria-hidden="true">
+            <span class="equalizer-bar"></span>
+            <span class="equalizer-bar"></span>
+            <span class="equalizer-bar"></span>
+        </div>
+        <span id="musicLabel" class="music-label">Music Off</span>
+    </button>
+
+    <!-- Main Invitation Stationery Card -->
+    <main class="main-container">
+        <article class="invitation-card" id="invitationContent">
+            <!-- Decorative Gold Filigree Corner Flourishes -->
+            <svg class="corner-flourish top-left" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                <path d="M10 90 C 10 30, 30 10, 90 10 M20 90 C 20 40, 40 20, 90 20 M10 10 L 25 25" stroke="var(--color-gold-primary)" stroke-width="1.5"/>
+            </svg>
+            <svg class="corner-flourish top-right" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                <path d="M10 90 C 10 30, 30 10, 90 10 M20 90 C 20 40, 40 20, 90 20 M10 10 L 25 25" stroke="var(--color-gold-primary)" stroke-width="1.5"/>
+            </svg>
+            <svg class="corner-flourish bottom-left" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                <path d="M10 90 C 10 30, 30 10, 90 10 M20 90 C 20 40, 40 20, 90 20 M10 10 L 25 25" stroke="var(--color-gold-primary)" stroke-width="1.5"/>
+            </svg>
+            <svg class="corner-flourish bottom-right" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+                <path d="M10 90 C 10 30, 30 10, 90 10 M20 90 C 20 40, 40 20, 90 20 M10 10 L 25 25" stroke="var(--color-gold-primary)" stroke-width="1.5"/>
+            </svg>
+
+            <!-- Inner Gold Frame -->
+            <div class="card-inner-border" aria-hidden="true"></div>
+
+            <!-- Christian Cross Emblem -->
+            <header class="header-motif">
+                <div class="cross-icon" aria-label="Christian Cross">
+                    <svg width="34" height="46" viewBox="0 0 24 32" fill="currentColor">
+                        <path d="M10 0 H14 V9 H22 V13 H14 V32 H10 V13 H2 V9 H10 V0 Z"/>
+                    </svg>
+                </div>
+                <div class="motif-divider" aria-hidden="true">
+                    <span>✝</span>
+                </div>
+            </header>
+
+            <!-- Holy Scripture Quotation -->
+            <section class="scripture-block" aria-label="Scripture Verse">
+                <blockquote class="scripture-verse">
+                    Love is patient, love is kind. It always protects, always trusts, always hopes, always perseveres. Love never fails.
+                </blockquote>
+                <cite class="scripture-ref">1 Corinthians 13:4, 7-8</cite>
+            </section>
+
+            <!-- Bride and Groom Portrait Frame -->
+            <div class="couple-showcase">
+                <div class="couple-photo-arch-frame">
+                    <img src="assets/couple.jpg" alt="David and Sarah - Christian Bride and Groom" class="couple-photo" loading="lazy">
+                    <div class="couple-photo-shine" aria-hidden="true"></div>
+                </div>
+                <div class="couple-ribbon-tag">
+                    <span class="tag-cross">✝</span>
+                    <span>Together in Christ</span>
+                </div>
+            </div>
+
+            <!-- Formal Invitation Phrasing -->
+            <p class="invitation-intro">Together with their families</p>
+
+            <!-- Bride and Groom Names -->
+            <div class="couple-names-wrap">
+                <h1 class="groom-name">David Alexander</h1>
+                <div class="names-connector" aria-hidden="true">
+                    <span>&amp;</span>
+                </div>
+                <div class="bride-name">Sarah Elizabeth</div>
+            </div>
+
+            <!-- Solemnisation Request -->
+            <p class="ceremony-intro">
+                Request the honour of your presence and prayers<br>
+                at the celebration of their Holy Matrimony<br>
+                uniting in sacred marriage
+            </p>
+
+            <!-- Date, Time & Church Details -->
+            <section class="event-details-card" aria-label="Ceremony Details">
+                <div class="date-banner">
+                    <span class="day-text">Tuesday</span>
+                    <span class="date-number">24</span>
+                    <span class="year-text">November 2026</span>
+                </div>
+                <div class="time-banner">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    <span>At 10:30 In The Morning</span>
+                </div>
+            </section>
+
+            <!-- Venue Showcase with Photo & Church Details (No Food Details) -->
+            <section class="venue-showcase-card" aria-label="Cathedral Venue and Sanctuary">
+                <div class="venue-photo-wrapper">
+                    <img src="assets/venue.jpg" alt="St. Mary’s Cathedral Sanctuary Interior" class="venue-photo" loading="lazy">
+                    <div class="venue-photo-overlay"></div>
+                    <div class="venue-photo-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                        </svg>
+                        <span>Ceremony Venue</span>
+                    </div>
+                </div>
+                <div class="venue-info-pane">
+                    <h2 class="venue-church-title">St. Mary’s Cathedral</h2>
+                    <p class="venue-church-subtitle">Cathedral Sanctuary &bull; Diocese Hall, Church Street</p>
+
+                    <div class="venue-guide-grid">
+                        <div class="venue-guide-item">
+                            <div class="guide-icon">✝</div>
+                            <div class="guide-text">
+                                <strong>Holy Matrimony Service</strong>
+                                <p>Solemn nuptial blessing, holy vows and exchange of rings.</p>
+                            </div>
+                        </div>
+                        <div class="venue-guide-item">
+                            <div class="guide-icon">⛪</div>
+                            <div class="guide-text">
+                                <strong>Sanctuary Aisle</strong>
+                                <p>Main Gothic Nave, kindly take your seats by 10:15 AM.</p>
+                            </div>
+                        </div>
+                        <div class="venue-guide-item">
+                            <div class="guide-icon">🚗</div>
+                            <div class="guide-text">
+                                <strong>Parking &amp; Access</strong>
+                                <p>Designated church courtyard parking with step-free entrance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Live Countdown Timer -->
+            <section class="countdown-section" aria-label="Countdown to the Wedding">
+                <p class="countdown-title">Counting Down To Our Sacred Day</p>
+                <div class="countdown-grid">
+                    <div class="countdown-box">
+                        <div id="countDays" class="countdown-number">00</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div id="countHours" class="countdown-number">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div id="countMins" class="countdown-number">00</div>
+                        <div class="countdown-label">Mins</div>
+                    </div>
+                    <div class="countdown-box">
+                        <div id="countSecs" class="countdown-number">00</div>
+                        <div class="countdown-label">Secs</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Action Buttons: Calendar, Directions, RSVP -->
+            <div class="action-buttons-wrap">
+                <button type="button" id="addToCalendarBtn" class="action-btn primary" title="Add to your personal calendar">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>Save Date</span>
+                </button>
+                <a href="https://maps.google.com/?q=St+Mary's+Cathedral" target="_blank" rel="noopener noreferrer" class="action-btn secondary" title="Open Church location in Google Maps">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span>Location</span>
+                </a>
+                <button type="button" id="openRsvpBtn" class="action-btn secondary" title="Confirm your attendance and send blessings">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                    <span>Send Blessings / RSVP</span>
+                </button>
+            </div>
+
+            <!-- Standard Blessing & Solemn Closing (No Food Details) -->
+            <footer class="blessing-footer">
+                <p class="blessing-text">
+                    “Therefore what God has joined together, let no one separate.”
+                </p>
+                <p class="footer-signatures">Mark 10:9 &bull; With Love &amp; Gratitude</p>
+            </footer>
+        </article>
+    </main>
+
+    <!-- RSVP & Prayer Wishes Modal (No Food Details) -->
+    <div id="rsvpModal" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="rsvpModalTitle">
+        <div class="modal-card">
+            <button type="button" id="closeModalBtn" class="modal-close-btn" aria-label="Close dialog">&times;</button>
+            <div class="modal-header">
+                <h3 id="rsvpModalTitle" class="modal-title">Prayers &amp; Attendance</h3>
+                <p class="modal-subtitle">Celebrate with us on 24th November 2026</p>
+            </div>
+            <form id="rsvpForm">
+                <div class="form-group">
+                    <label for="guestName" class="form-label">Your Name / Family</label>
+                    <input type="text" id="guestName" class="form-input" placeholder="e.g. The Thomas Family" required>
+                </div>
+                <div class="form-group">
+                    <label for="guestAttendance" class="form-label">Will you be attending?</label>
+                    <select id="guestAttendance" class="form-select" required>
+                        <option value="joyfully_accept">Joyfully attending in person</option>
+                        <option value="praying_from_afar">Celebrating with prayers from afar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="guestMessage" class="form-label">Prayer or Blessing for the Couple</label>
+                    <textarea id="guestMessage" class="form-textarea" placeholder="Write a warm prayer or wish for David &amp; Sarah..."></textarea>
+                </div>
+                <button type="submit" class="modal-submit-btn">Send Blessings</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="audio.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
